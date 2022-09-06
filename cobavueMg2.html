@@ -1,0 +1,159 @@
+<!-- <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <span v-bind:style="[myStyle, myNewStyle]">Selamat Pagi</span>
+        </div>
+        
+        <script>
+            var app = Vue.createApp({
+                data(){
+                    return {
+                        myStyle: {
+                            color: 'blue',
+                            fontSize: '18pt',
+                            fontFamily: 'Arial',
+                            textDecoration: 'underline'
+                        },
+                        myNewStyle:{
+                            color: 'green'
+                        }
+                    };
+                }
+            });
+            app.mount('#app');
+        </script>
+    </body>
+</html> -->
+
+
+<!-- <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <style>
+            span{
+                color:black
+            }
+            .aktif{
+                color:red
+            }
+            .judul{
+                font-weight: bold;
+                font-size: 24pt
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <span class="judul" v-bind:class="{aktif: isAktif}">Selamat Pagi</span>
+        </div>
+
+        <script>
+            var app = Vue.createApp({
+                data(){
+                    return {
+                        isAktif: true
+                    }
+                }
+            });
+            app.mount('#app');
+        </script>        
+    </body>
+</html> -->
+
+
+<!-- <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model="username" placeholder="masukkan username..."/>
+            <div>Selamat datang, {{username}}</div>
+        </div>
+            
+
+        <script>
+            var app = Vue.createApp({
+                data(){
+                    return {
+                        username: ''
+                    }
+                }
+            });
+            app.mount('#app');
+        </script>        
+    </body>
+</html> -->
+
+
+<!-- <html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model="username" placeholder="masukkan username..." /> <br>
+            <input type="checkbox" id="makan" value="makan" v-model="hobi" />
+            <label for="makan">Makan</label>
+            <input type="checkbox" id="tidur" value="tidur" v-model="hobi" />
+            <label for="makan">Tidur</label>
+            <input type="checkbox" id="sing" value="sing" v-model="hobi" />
+            <label for="makan">Sing</label>
+
+            <div>Halo saya, {{username}}</div>
+            <div>Hobi saya : <span v-for="h in hobi">{{h}}, </span></div>
+        </div>
+            
+
+        <script>
+            var app = Vue.createApp({
+                data(){
+                    return {
+                        username: '',
+                        hobi: []
+                    }
+                }
+            });
+            app.mount('#app');
+        </script>        
+    </body>
+</html> -->
+
+
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model="nama" placeholder="nama..." />
+            <input v-model="usia" placeholder="usia..." />
+            
+            <input type="radio" value="red" id="red" v-model="warna"/> <label for="red">Merah</label>
+            <input type="radio" value="blue" id="blue" v-model="warna"/> <label for="blue">Biru</label>
+            
+
+            <div>{{username1, username1}}</div>
+            <div><span v-bind:class="{blue: isBlue}"> </span></div>
+            <div><span v-bind:class="{red: isRed}"> </span></div>
+            <div v-bind:style="{color: warna}">Perkenalkan nama saya {{nama}}, usia {{usia}}th, warna kesukaan saya adalah {{warna == 'red' ? 'merah' : 'biru'}}</div>
+        </div>
+            
+
+        <script>
+            var app = Vue.createApp({
+                data(){
+                    return {
+                        nama: '',
+                        usia: '',
+                        warna: ''
+                    }
+                }
+            });
+            app.mount('#app');
+        </script>        
+    </body>
+</html>
